@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+  <version>1000</version>
+  <dependencies>
+    <dependency>profile-plone.app.imagecropping:default</dependency>
+    <dependency>profile-plone.app.mosaic:default</dependency>
+    <dependency>profile-plone.app.standardtiles:default</dependency>
+    <dependency>profile-collective.behavior.banner:default</dependency>
+    <dependency>profile-collective.easyform:default</dependency>
+    <dependency>profile-collective.geolocationbehavior:default</dependency>
+    <dependency>profile-collective.cookiecuttr:default</dependency>
+  </dependencies>
+</metadata>

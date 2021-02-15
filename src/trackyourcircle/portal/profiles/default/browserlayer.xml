@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layers>
+  <layer
+      name="trackyourcircle.portal"
+      interface="trackyourcircle.portal.interfaces.ITrackYourCirclePortalLayer"
+      />
+</layers>

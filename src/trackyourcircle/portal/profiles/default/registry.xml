@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+  <records prefix="plone.resources/trackyourcircle.portal"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">++plone++trackyourcircle.portal/portal.css</value>
+  </records>
+
+  <records prefix="plone.bundles/trackyourcircle.portal"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="resources">
+      <element>trackyourcircle.portal</element>
+    </value>
+    <value key="depends">plone</value>
+    <value key="enabled">True</value>
+    <value key="compile">True</value>
+    <value key="csscompilation">++plone++trackyourcircle.portal/portal-compiled.css</value>
+    <value key="last_compilation">2021-02-15 22:30:00</value>
+  </records>
+
+</registry>

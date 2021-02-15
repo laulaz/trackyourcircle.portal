@@ -1,0 +1,153 @@
+body {
+    box-sizing: border-box !important;
+    color: rgb(64, 95, 114) !important;
+    font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    line-height: 25px !important;
+    margin-bottom: 16px !important;
+    margin-top: 0px !important;
+    text-align: left !important;
+}
+
+.plone-navbar {
+    margin-bottom: 4rem !important;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.17) !important;
+    background-color: #3cb4c2 !important;
+}
+
+.plone-navbar-toggle:hover {
+    background-color: #276f78 !important;
+}
+
+.plone-nav li a:hover, .plone-nav li a:focus {
+    text-decoration: none !important;
+    background-color: #276f78 !important;
+}
+
+.plone-navbar-nav .current > a, .plone-navbar-nav .selected > a, .plone-navbar-nav .current > a:hover, .plone-navbar-nav .selected > a:hover, .plone-navbar-nav .current > a:focus, .plone-navbar-nav .selected > a:focus {
+    background-color: #276f78 !important;
+}
+
+#content a {
+    color: #3cb4c2 !important;
+}
+
+#content p {
+    margin: 0 0 2rem !important;
+}
+
+#content h1 {
+   margin-bottom: 2rem !important;
+}
+
+#content h2 {
+   margin: 3rem 0rem 2rem 0rem !important;
+}
+
+#content ul li {
+    margin: 0 0 1.2rem !important;
+}
+
+#content .image-right {
+    margin: 3rem !important;
+    border-radius: 10px;
+}
+
+#content-header {
+    background-color: white !important;
+}
+
+#portal-header {
+    margin: 0px !important;
+}
+
+.plone-navbar-nav > li > a {
+    line-height: 30px !important;
+    padding: 15px 20px !important;
+}
+    
+.plone-nav li a {
+    font-size: 20px !important;
+}
+
+#content form label {
+    font-size: 15px !important;
+}
+
+#content label .required::after {
+    top: 2px !important;
+    font-size: 150% !important;
+    margin-left: -4px !important;
+}
+
+
+.searchSection {
+    display: none !important;
+}
+
+#portal-banner {
+    padding: 0px;
+    margin-top: 0px;
+    background: transparent;
+}
+
+#portal-banner .container {
+    width: 100%;
+}
+
+#portal-logo img {
+    max-width: 30rem;
+    max-height: 30rem;
+    margin: 1rem 0rem;
+}
+
+.portal-banner .bannerImage img {
+    margin: auto;
+}
+
+.plone-nav > li > a:hover,
+.plone-nav > li > a:focus,
+.plone-navbar-nav > .selected > a,
+.plone-navbar-nav > .selected > a:hover,
+.plone-navbar-nav > .selected > a:focus {
+    background-color: #cc97e5;
+}
+
+.plone-breadcrumb ol a {
+    color: #ff8c41;
+}
+
+#portal-footer .row + .site-actions {
+    border-top: none !important;
+}
+
+.site-actions a {
+    color: #3cb4c2 !important;
+}
+
+#portal-footer-wrapper {
+    padding: 0px !important;
+}
+
+#portal-footer > .row {
+    margin-top: 0px !important;
+}
+
+#portal-footer {
+    text-align: center;
+    padding-top: 1em;
+}
+
+
+@media screen and (max-width: 768px) {
+    .image-right {
+        
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .container {
+        width: 1170px !important;
+    }
+}
