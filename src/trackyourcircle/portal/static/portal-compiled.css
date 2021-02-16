@@ -13,24 +13,24 @@ body {
 .plone-navbar {
     margin-bottom: 4rem !important;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.17) !important;
-    background-color: #3cb4c2 !important;
+    background-color: #05827e !important;
 }
 
 .plone-navbar-toggle:hover {
-    background-color: #276f78 !important;
+    background-color: #0DB6B1 !important;
 }
 
 .plone-nav li a:hover, .plone-nav li a:focus {
     text-decoration: none !important;
-    background-color: #276f78 !important;
+    background-color: #0DB6B1 !important;
 }
 
 .plone-navbar-nav .current > a, .plone-navbar-nav .selected > a, .plone-navbar-nav .current > a:hover, .plone-navbar-nav .selected > a:hover, .plone-navbar-nav .current > a:focus, .plone-navbar-nav .selected > a:focus {
-    background-color: #276f78 !important;
+    background-color: #0DB6B1 !important;
 }
 
 #content a {
-    color: #3cb4c2 !important;
+    color: #0DB6B1 !important;
 }
 
 #content p {
@@ -123,7 +123,7 @@ body {
 }
 
 .site-actions a {
-    color: #3cb4c2 !important;
+    color: #0DB6B1 !important;
 }
 
 #portal-footer-wrapper {

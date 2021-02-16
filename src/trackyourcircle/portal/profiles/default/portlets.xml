@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<portlets>
+ <assignment name="footer" category="context" key="/"
+    manager="plone.footerportlets" type="portlets.Classic" visible="False">
+  <property name="macro"></property>
+  <property name="template">@@footer</property>
+ </assignment>
+ <assignment name="colophon" category="context" key="/"
+    manager="plone.footerportlets" type="portlets.Classic" visible="False">
+  <property name="macro"></property>
+  <property name="template">colophon</property>
+ </assignment>
+</portlets>
