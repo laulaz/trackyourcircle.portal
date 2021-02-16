@@ -23,4 +23,22 @@
   <record name="geolocation.default_longitude" interface="plone.formwidget.geolocation.interfaces.IGeolocationSettings" field="default_longitude">
     <value>4.352</value>
   </record>
+  <records interface="plone.i18n.interfaces.ILanguageSchema" prefix="plone">
+    <value key="always_show_selector">False</value>
+    <value key="authenticated_users_only">False</value>
+    <value key="available_languages">
+      <element>fr</element>
+      <element>nl</element>
+    </value>
+    <value key="default_language">fr</value>
+    <value key="display_flags">False</value>
+    <value key="set_cookie_always">False</value>
+    <value key="use_cctld_negotiation">False</value>
+    <value key="use_combined_language_codes">False</value>
+    <value key="use_content_negotiation">False</value>
+    <value key="use_cookie_negotiation">False</value>
+    <value key="use_path_negotiation">False</value>
+    <value key="use_request_negotiation">True</value>
+    <value key="use_subdomain_negotiation">False</value>
+  </records>
 </registry>
