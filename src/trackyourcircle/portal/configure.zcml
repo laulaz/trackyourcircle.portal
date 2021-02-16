@@ -9,6 +9,7 @@
   <include package="plone.app.imagecropping" />
   <include package="plone.app.mosaic" />
   <include package="plone.app.standardtiles" />
+  <include package="collective.anysurfer" />
   <include package="collective.behavior.banner" />
   <include package="collective.easyform" />
   <include package="collective.cookiecuttr" />

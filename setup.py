@@ -47,6 +47,7 @@ setup(
         "plone.app.imagecropping",
         "plone.app.mosaic",
         "plone.app.standardtiles",
+        "collective.anysurfer",
         "collective.behavior.banner",
         "collective.cookiecuttr",
         "collective.easyform",
