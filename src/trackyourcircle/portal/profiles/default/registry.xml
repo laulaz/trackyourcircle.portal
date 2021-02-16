@@ -35,7 +35,7 @@
     <value key="set_cookie_always">False</value>
     <value key="use_cctld_negotiation">False</value>
     <value key="use_combined_language_codes">False</value>
-    <value key="use_content_negotiation">False</value>
+    <value key="use_content_negotiation">True</value>
     <value key="use_cookie_negotiation">False</value>
     <value key="use_path_negotiation">False</value>
     <value key="use_request_negotiation">True</value>
