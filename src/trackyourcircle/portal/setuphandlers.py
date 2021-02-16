@@ -2,6 +2,7 @@
 
 from Products.CMFPlone.interfaces import INonInstallable
 from plone import api
+from plone.app.multilingual.browser.setup import SetupMultilingualSite
 from zope.interface import implementer
 
 TO_DELETE = [
@@ -27,6 +28,9 @@ def post_install(context):
         content = getattr(portal, content_id, None)
         if content:
             api.content.delete(content)
+
+    setupTool = SetupMultilingualSite()
+    setupTool.setupSite(portal)
 
 
 def uninstall(context):
