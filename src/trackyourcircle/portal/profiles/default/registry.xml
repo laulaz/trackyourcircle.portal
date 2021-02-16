@@ -24,7 +24,7 @@
     <value>4.352</value>
   </record>
   <records interface="plone.i18n.interfaces.ILanguageSchema" prefix="plone">
-    <value key="always_show_selector">False</value>
+    <value key="always_show_selector">True</value>
     <value key="authenticated_users_only">False</value>
     <value key="available_languages">
       <element>fr</element>
