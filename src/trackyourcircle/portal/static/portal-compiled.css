@@ -79,7 +79,7 @@ body {
     font-size: 15px !important;
 }
 
-#content label .required::after {
+#content-core label .required::after {
     font-size: 150%;
     top: 0px;
     margin-left: 0px;
