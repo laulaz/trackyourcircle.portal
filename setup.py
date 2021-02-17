@@ -51,6 +51,7 @@ setup(
         "collective.cookiecuttr",
         "collective.easyform",
         "collective.geolocationbehavior",
+        "plone.gallery",
     ],
     entry_points="""
     [z3c.autoinclude.plugin]

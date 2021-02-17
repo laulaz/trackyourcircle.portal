@@ -13,6 +13,7 @@
   <include package="collective.easyform" />
   <include package="collective.cookiecuttr" />
   <include package="z3c.jbot" file="meta.zcml" />
+  <include package="plone.gallery" />
 
   <browser:jbot
       directory="overrides"
@@ -48,5 +49,17 @@
       factory=".setuphandlers.HiddenProfiles"
       name="trackyourcircle.portal-hiddenprofiles"
       />
+
+  <genericsetup:upgradeSteps
+      source="1000"
+      destination="1001"
+      profile="trackyourcircle.portal:default"
+      >
+      <genericsetup:upgradeDepends
+          title="Install photo gallery"
+          description=""
+          import_profile="plone.gallery:default"
+          />
+  </genericsetup:upgradeSteps>
 
 </configure>
