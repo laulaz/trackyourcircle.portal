@@ -78,7 +78,9 @@ body {
     font-size: 15px !important;
 }
 
-#content-core label .required::after {
+#content label .required::after,
+#content-core label .required::after,
+.plone-modal-body label .required::after {
     font-size: 150%;
     top: 0px;
     margin-left: 0px;
