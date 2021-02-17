@@ -119,6 +119,15 @@ body {
     background-color: #cc97e5;
 }
 
+#portal-languageselector a,
+#portal-languageselector a:hover {
+    color: #05827e;
+}
+
+#portal-languageselector .currentLanguage a {
+    font-weight: bold;
+}
+
 .plone-breadcrumb ol a {
     color: #ff8c41;
 }
