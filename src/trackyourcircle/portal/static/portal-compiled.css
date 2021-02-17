@@ -141,6 +141,7 @@ body {
 #portal-footer {
     text-align: center;
     padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 @media screen and (max-width: 768px) {
