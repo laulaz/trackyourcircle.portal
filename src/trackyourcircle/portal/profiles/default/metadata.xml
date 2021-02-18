@@ -12,5 +12,7 @@
     <dependency>profile-collective.geolocationbehavior:default</dependency>
     <dependency>profile-collective.cookiecuttr:default</dependency>
     <dependency>profile-plone.gallery:default</dependency>
+    <dependency>profile-eea.facetednavigation:default</dependency>
+    <dependency>profile-collective.faceted.map:default</dependency>
   </dependencies>
 </metadata>
