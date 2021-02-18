@@ -53,6 +53,8 @@ setup(
         "collective.easyform",
         "collective.geolocationbehavior",
         "plone.gallery",
+        "eea.facetednavigation ",
+        "collective.faceted.map",
     ],
     entry_points="""
     [z3c.autoinclude.plugin]
