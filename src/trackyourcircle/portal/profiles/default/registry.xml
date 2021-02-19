@@ -17,6 +17,15 @@
     <value key="csscompilation">++plone++trackyourcircle.portal/portal-compiled.css</value>
     <value key="last_compilation">2021-02-15 22:30:00</value>
   </records>
+  <record name="plone.allowed_sizes"
+          interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema" field="allowed_sizes">
+    <value purge="false">
+      <element>banner 1140:223</element>
+    </value>
+  </record>
+  <record interface="collective.behavior.banner.browser.controlpanel.IBannerSettingsSchema" field="banner_scale">
+    <value>banner</value>
+  </record>
   <record name="geolocation.default_latitude" interface="plone.formwidget.geolocation.interfaces.IGeolocationSettings" field="default_latitude">
     <value>50.847</value>
   </record>

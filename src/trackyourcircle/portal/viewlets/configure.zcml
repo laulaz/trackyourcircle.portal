@@ -1,0 +1,16 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="trackyourcircle.portal">
+
+  <browser:viewlet
+      name="collective.bannerviewlet"
+      for="plone.dexterity.interfaces.IDexterityContent"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+      class="collective.behavior.banner.browser.viewlets.BannerViewlet"
+      layer="collective.behavior.banner.interfaces.ICollectiveBannerLayer"
+      permission="zope2.View"
+      />
+
+</configure>

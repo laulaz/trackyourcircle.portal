@@ -3,4 +3,11 @@
  <hidden manager="plone.portalheader" skinname="Plone Default">
   <viewlet name="plone.searchbox"/>
  </hidden>
+ <hidden manager="plone.abovecontent" skinname="Plone Default">
+  <viewlet name="collective.bannerviewlet"/>
+ </hidden>
+ <order manager="plone.portaltop" skinname="Plone Default">
+  <viewlet name="collective.bannerviewlet"/>
+  <viewlet name="plone.header"/>
+ </order>
 </object>
