@@ -48,14 +48,37 @@ body {
     margin-top: 10px;
 }
 
+#content-core table {
+    background-color: transparent;
+}
+
+#content-core table td {
+    padding: 0.5em;
+}
+
 #content ul li {
     margin: 0 0 1.2rem !important;
 }
 
-#content .image-right {
-    margin: 3rem !important;
+#content .image-left {
+    margin: 2rem 3rem 2rem 0rem !important;
     border-radius: 10px;
 }
+
+#content .image-inline {
+    margin: 1rem 0rem 1rem 0rem !important;
+    border-radius: 10px;
+}
+
+#content .image-right {
+    margin: 3rem 0rem 3rem 3rem !important;
+    border-radius: 10px;
+}
+
+iframe {
+    max-width: 100%;
+}
+
 
 #content-header {
     background-color: white !important;
