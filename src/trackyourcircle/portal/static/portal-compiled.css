@@ -80,7 +80,6 @@ iframe {
     max-width: 100%;
 }
 
-
 #content-header {
     background-color: white !important;
 }
@@ -232,9 +231,6 @@ iframe {
     }
     #portal-header #portal-logo {
         float: none;
-    }
-    .image-right {
-        
     }
 }
 
