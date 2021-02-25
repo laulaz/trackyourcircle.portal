@@ -1,0 +1,17 @@
+      <script type="text/javascript">
+        var search = function() {
+              var city = $('#form-widgets-city').val();
+              var location = $('#form-widgets-location').val();
+              if (city.trim() != '' || location.trim() != '') {
+                  var address = city + ' ' + location;
+                  $('.pat-leaflet').trigger('leaflet.geosearch', address);
+              }
+        };
+        jQuery(document).ready(function($) {
+           $('#form-buttons-search').click(function(event) {
+              event.preventDefault();
+              search();
+            });
+           $('.pat-leaflet').on('leaflet.afterinit', search);
+        });
+      </script>

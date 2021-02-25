@@ -1,0 +1,2 @@
+<h1 tal:content="context/title">Circle</h1>
+<p>There are <span tal:replace="python:len(context.getFolderContents())">25</span> circles.</p>

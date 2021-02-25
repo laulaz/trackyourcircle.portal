@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
+  lang="en-US"
+  metal:use-macro="here/main_template/macros/master"
+  i18n:domain="plone">
+
+<body>
+
+<div metal:fill-slot="main">
+<h1>Search Circle</h1>
+  <div id="faceted-results-items" class="no-map" data-geojson=''
+       tal:define="map_view context/@@faceted-map-geojson;"
+       tal:attributes="data-geojson python:map_view.data_geo(view.batch())" />
+  <div id="faceted-map-container" class="pat-leaflet" style="width: 100%; height:40em;" data-pat-leaflet="${view/map_configuration}"
+    data-geojson=""></div>
+  <script type="text/javascript">
+        var afterinit = function() {
+            var data = $("#faceted-results-items").attr("data-geojson");
+            if ( typeof data != "undefined"  && data ) {
+              data = JSON.parse(data);
+              if ( data.features.length > 0 ) {
+                $('#faceted-map-container').trigger('leaflet.refresh', data);
+              }
+            }
+        }
+        jQuery(document).ready(function($) {
+            $('#faceted-map-container').on('leaflet.afterinit', afterinit);
+        });
+  </script>
+</div>
+</body>
+</html>

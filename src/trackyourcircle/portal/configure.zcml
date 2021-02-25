@@ -53,6 +53,8 @@
       name="trackyourcircle.portal-hiddenprofiles"
       />
 
+  <include package=".browser" />
+
   <genericsetup:upgradeSteps
       source="1000"
       destination="1001"
@@ -65,4 +67,15 @@
           />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      source="1001"
+      destination="1002"
+      profile="trackyourcircle.portal:default"
+      >
+      <genericsetup:upgradeDepends
+          title="Install circle"
+          description=""
+          import_steps="typeinfo"
+          />
+  </genericsetup:upgradeSteps>
 </configure>

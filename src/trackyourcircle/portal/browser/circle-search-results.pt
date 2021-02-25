@@ -1,0 +1,17 @@
+  <div id="faceted-results-items" class="no-map" data-geojson=''
+       tal:define="map_view context/@@faceted-map-geojson;"
+       tal:attributes="data-geojson python:map_view.data_geo(view.batch())" />
+  <script type="text/javascript">
+        var afterinit = function() {
+            var data = $("#faceted-results-items").attr("data-geojson");
+            if ( typeof data != "undefined"  && data ) {
+                data = JSON.parse(data);
+                if ( data.features.length > 0 ) {
+                    $('.pat-leaflet').trigger('leaflet.refresh', data);
+                }
+            }
+        };
+        jQuery(document).ready(function($) {
+            $('.pat-leaflet').on('leaflet.afterinit', afterinit);
+        });
+  </script>

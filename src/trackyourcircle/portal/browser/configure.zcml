@@ -1,0 +1,35 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:plone="http://namespaces.plone.org/plone"
+  i18n_domain="collective.faceted.map">
+
+  <browser:page
+    name="faceted-map-geojson-popup"
+    for="..interfaces.ICircle"
+    class=".circle.FacetedGeoJSONPopup"
+    permission="zope2.View"
+    />
+
+  <browser:page
+      for="*"
+      name="add-circle"
+      permission="zope2.View"
+      class=".circle.AddCircle"
+      />
+
+  <browser:page
+      for="*"
+      name="search-circles"
+      permission="zope2.View"
+      class=".circle.SearchCircle"
+      />
+
+  <browser:page
+      for="*"
+      name="view-circles"
+      permission="zope2.View"
+      class=".circle.ViewCircle"
+      />
+
+</configure>
