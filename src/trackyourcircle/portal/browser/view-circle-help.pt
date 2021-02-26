@@ -1,2 +1,4 @@
+<tal:i18n i18n:domain="trackyourcircle.portal">
 <h1 tal:content="context/title">Circle</h1>
-<p>There are <span tal:replace="python:len(context.getFolderContents())">25</span> circles.</p>
+<p i18n:translate="">There are <span i18n:name="circle_number" tal:replace="python:len(context.getFolderContents())">25</span> circles.</p>
+</tal:i18n>

@@ -1,4 +1,8 @@
-<h1>Add Circle</h1>
-<div class="ex-help">Third, id needed, move the red marker on the map to the precise location.</div>
-<div class="ex-help">Or search again.</div>
-<div class="ex-help">Fourth, save the circle.</div>
+<tal:i18n i18n:domain="trackyourcircle.portal">
+<h1 i18n:translate="">Add missing Circle</h1>
+<div class="ex-help">
+  <p i18n:translate="">Third, id needed, move the red marker on the map to the precise location.</p>
+  <p i18n:translate="">Or search again.</p>
+  <p i18n:translate="">Fourth, save the circle.</p>
+</div>
+</tal:i18n>

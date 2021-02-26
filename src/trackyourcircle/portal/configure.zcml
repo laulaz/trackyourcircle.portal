@@ -6,6 +6,8 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     i18n_domain="trackyourcircle.portal">
 
+  <i18n:registerTranslations directory="locales" />
+
   <include package="plone.app.imagecropping" />
   <include package="plone.app.mosaic" />
   <include package="plone.app.standardtiles" />

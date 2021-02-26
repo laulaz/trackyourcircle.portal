@@ -217,6 +217,15 @@ iframe {
     padding-bottom: 1em;
 }
 
+.ex-help {
+    margin: 1em;
+    font-size: 15px !important;
+}
+
+#content .ex-help p {
+    margin: 0 !important;
+}
+
 @media screen and (max-width: 768px) {
     #portal-banner {
         display: none;
@@ -282,4 +291,3 @@ Fancy effects
     to {
         opacity: 1;
     }
-}

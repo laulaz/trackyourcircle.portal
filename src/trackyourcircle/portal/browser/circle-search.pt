@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
   lang="en-US"
   metal:use-macro="here/main_template/macros/master"
-  i18n:domain="plone">
+  i18n:domain="trackyourcircle.portal">
 
 <body>
 
 <div metal:fill-slot="main">
-<h1>Search Circle</h1>
+<h1 i18n:translate="">Search Circle</h1>
   <div id="faceted-results-items" class="no-map" data-geojson=''
        tal:define="map_view context/@@faceted-map-geojson;"
        tal:attributes="data-geojson python:map_view.data_geo(view.batch())" />

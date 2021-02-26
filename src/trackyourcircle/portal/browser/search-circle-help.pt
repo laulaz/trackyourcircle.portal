@@ -1,3 +1,7 @@
-<h1>Add Circle</h1>
-<div class="ex-help">First, search if the circle already exists</div>
-<div class="ex-help">Second, if not, add the missing circle.</div>
+<tal:i18n i18n:domain="trackyourcircle.portal">
+<h1 i18n:translate="">Search and add Circle</h1>
+<div class="ex-help">
+  <p i18n:translate="">First, search if the circle already exists</p>
+  <p i18n:translate="">Second, if not, add the missing circle.</p>
+</div>
+</tal:i18n>

@@ -2,20 +2,22 @@ from Products.Five import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 import json
 
+from zope.interface import implementer
 from zope import schema
 from zope.i18n import translate
 
-from plone import api
 from zope.interface import Interface
 from z3c.form import button
 from z3c.form import form
-from zope.interface import implementer
+from z3c.form.browser.text import TextWidget
 from z3c.form.interfaces import IFieldsAndContentProvidersForm
 from z3c.form.contentprovider import ContentProviders
 from zope.contentprovider.provider import ContentProviderBase
 from plone.autoform.form import AutoExtensibleForm
+from plone.autoform import directives
 from plone.formwidget.geolocation.field import GeolocationField
 
+from plone import api
 from trackyourcircle.portal import _
 
 
@@ -35,13 +37,42 @@ class ISearchCircle(Interface):
     city = schema.TextLine(
         title=_('label_city', default=u'City'),
         required=True)
+    directives.widget(
+        'city',
+        TextWidget,
+        placeholder=_(u"Specify city, village or municipality.")
+    )
+
 
     location = schema.TextLine(
         title=_('label_location', default=u'Location'),
         required=False)
+    directives.widget(
+        'location',
+        TextWidget,
+        placeholder=_(u"Specify location like Times Square")
+    )
 
 
-class IAddCircle(ISearchCircle):
+class IAddCircle(Interface):
+    city = schema.TextLine(
+        title=_('label_city', default=u'City'),
+        required=True)
+    directives.widget(
+        'city',
+        TextWidget,
+        placeholder=_(u"Specify city, village or municipality.")
+    )
+
+    location = schema.TextLine(
+        title=_('label_location', default=u'Location'),
+        required=True)
+    directives.widget(
+        'location',
+        TextWidget,
+        placeholder=_(u"Specify location like Times Square")
+    )
+
     geolocation = GeolocationField(
         title=_('label_geolocation', default=u'Geolocation'),
         description=_('help_geolocation',
@@ -165,16 +196,21 @@ class SearchCircle(AutoExtensibleForm, form.AddForm):
     @button.buttonAndHandler(_(u"Add missing Circle"))
     def handleAddMissing(self, action):
         data, errors = self.extractData()
+        if errors:
+            self.status = self.formErrorsMessage
+            return
         city = data['city']
-        location = data['location']
-        url = ( self.context.absolute_url() +
-            '/add-circle?form.widgets.city=%s&form.widgets.location=%s' % (city, location)
-        )
+        url = self.context.absolute_url()
+        url += '/add-circle?form.widgets.city=%s' % city
+        location = data.get('location')
+        if location:
+            url += '&form.widgets.location=%s' % location
         self.request.response.redirect(url)
- 
+
     @button.buttonAndHandler(_(u"Cancel"))
     def handleCancel(self, action):
-        self.request.response.redirect(self.context.absolute_url() + '/view-circles')
+        self.request.response.redirect(
+            self.context.absolute_url() + '/view-circles')
 
 
 @implementer(IFieldsAndContentProvidersForm)
@@ -206,14 +242,15 @@ class AddCircle(AutoExtensibleForm, form.Form):
         title = data['city']
         if data['location']:
             title += " - " + data['location']
-        circle = api.content.create(
-            self.context, 
-            "Circle", title=title, geolocation=data['geolocation'])
-        api.content.transition(circle, 'publish')
+
+        with api.env.adopt_roles(['Manager']):
+            circle = api.content.create(
+                self.context,
+                "Circle", title=title, geolocation=data['geolocation'])
 
         self.request.response.redirect(self.context.absolute_url() + '/view-circles')
 
-    @button.buttonAndHandler(_(u"Search again"))
+    @button.buttonAndHandler(_(u"Search"))
     def handleSearch(self, action):
         pass
 
