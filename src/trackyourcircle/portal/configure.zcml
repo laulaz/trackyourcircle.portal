@@ -80,4 +80,16 @@
           import_steps="typeinfo"
           />
   </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      source="1002"
+      destination="1003"
+      profile="trackyourcircle.portal:default"
+      >
+      <genericsetup:upgradeDepends
+          title="Install circle"
+          description=""
+          import_steps="workflow"
+          />
+  </genericsetup:upgradeSteps>
 </configure>
