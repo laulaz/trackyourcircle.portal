@@ -9,7 +9,7 @@ from plone import api
 from zope.interface import Interface
 from z3c.form import button
 from z3c.form import form
-from zope.interface import implements
+from zope.interface import implementer
 from z3c.form.interfaces import IFieldsAndContentProvidersForm
 from z3c.form.contentprovider import ContentProviders
 from zope.contentprovider.provider import ContentProviderBase
@@ -113,8 +113,8 @@ class SearchCircleResults(ContentProviderBase):
        return self.context.portal_catalog(portal_type='Circle')
 
 
+@implementer(IFieldsAndContentProvidersForm)
 class ViewCircle(AutoExtensibleForm, form.AddForm):
-    implements(IFieldsAndContentProvidersForm)
 
     schema = IViewCircle
     ignoreContext = True
@@ -137,8 +137,8 @@ class ViewCircle(AutoExtensibleForm, form.AddForm):
         self.request.response.redirect(self.context.absolute_url() + '/search-circles')
 
 
+@implementer(IFieldsAndContentProvidersForm)
 class SearchCircle(AutoExtensibleForm, form.AddForm):
-    implements(IFieldsAndContentProvidersForm)
 
     schema = ISearchCircle
     ignoreContext = True
@@ -177,9 +177,9 @@ class SearchCircle(AutoExtensibleForm, form.AddForm):
         self.request.response.redirect(self.context.absolute_url() + '/view-circles')
 
 
+@implementer(IFieldsAndContentProvidersForm)
 class AddCircle(AutoExtensibleForm, form.Form):
     allow_prefill_from_GET_request = True
-    implements(IFieldsAndContentProvidersForm)
 
     schema = IAddCircle
     ignoreContext = True
