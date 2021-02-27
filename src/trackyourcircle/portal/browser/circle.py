@@ -200,9 +200,12 @@ class SearchCircle(AutoExtensibleForm, form.AddForm):
             self.status = self.formErrorsMessage
             return
         city = data['city']
+        import urllib
+        city = urllib.parse.quote(city)
         url = self.context.absolute_url()
         url += '/add-circle?form.widgets.city=%s' % city
         location = data.get('location')
+        location = urllib.parse.quote(location)
         if location:
             url += '&form.widgets.location=%s' % location
         self.request.response.redirect(url)
