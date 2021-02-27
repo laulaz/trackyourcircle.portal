@@ -87,9 +87,19 @@
       profile="trackyourcircle.portal:default"
       >
       <genericsetup:upgradeDepends
-          title="Install circle"
+          title="Install circle workflow"
           description=""
           import_steps="workflow"
+          />
+      <genericsetup:upgradeDepends
+          title="Install eea.facetednavigation"
+          description=""
+          import_profile="eea.facetednavigation:default"
+          />
+      <genericsetup:upgradeDepends
+          title="Install collective.faceted.map"
+          description=""
+          import_profile="collective.faceted.map:default"
           />
   </genericsetup:upgradeSteps>
 </configure>
