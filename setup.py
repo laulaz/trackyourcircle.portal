@@ -52,6 +52,7 @@ setup(
         "collective.cookiecuttr",
         "collective.easyform",
         "collective.geolocationbehavior",
+        "collective.honeypot",
         "plone.gallery",
     ],
     entry_points="""
